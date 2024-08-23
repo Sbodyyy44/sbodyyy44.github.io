@@ -15,10 +15,9 @@ body {
   background-image: url("https://images.pexels.com/photos/7135058/pexels-photo-7135058.jpeg?auto=compress&cs=tinysrgb&w=3840&h=2160&dpr=1");
 }
 
-
 .lang {
     /* line-height: 120vh; */
-    padding-top: 40vh;
+    padding-top: 35vh;
     text-align: center;
 }
 
@@ -59,3 +58,42 @@ body {
     text-align: center;
     
 }
+
+
+@media screen and (max-width: 1370px) {
+    .lang-background {
+        padding: 5% 2%;
+        margin: 0% 12%;
+    }
+    
+    .lang img {
+        width: 15vh;
+        height: 7vh;
+    }
+    
+    .footer {
+        /* margin-top: 20vh; */
+        margin-top: 25vh
+    }
+}
+
+@media screen and (max-width: 860px) {
+   
+    .lang-background {
+        padding: 5% 2%;
+        margin: 0% 10%;
+    }
+    
+    .lang-links {
+        padding-top: 10%
+    }
+    
+    .lang img {
+        width: 15vh;
+        height: 7vh;
+    }
+    
+    .footer {
+        margin-top: 35vh
+    }
+  }
