@@ -633,10 +633,6 @@ body {
           background: var(--grid-item-gradient);
         }
 
-        .grid-item-6 {
-
-        }
-
         /*-----------------------------------*/
         /*---------- END ABOUT BLOC ---------*/
         /*-----------------------------------*/
@@ -854,48 +850,164 @@ body {
         /*-----------------------------------*/
         /*------------ CONTACT BLOC ------------*/
         /*-----------------------------------*/
-        .block-arrangement-contact {
+        .touches {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             /* background-color: cornflowerblue;
             border: solid 1px black; */
             font-size: 2vmin;
+            text-align: center;
         }
 
-        .media-links-url {
+        .touches > * {
+          /* padding-bottom: 20px; */
+        } 
+
+
+        .media-links {
           display: flex;
           flex-direction: row;
-          justify-content: space-around;
-          padding-right: 75%;
-          padding: 0% 0.1%;
+          justify-content: center;
+          /* line-height: 55px; */
+          /* background-color: var(--border-clear); */
+        }
+
+        .links a {
+          text-decoration: none;
+          /* padding: 0% 50px; */
+          padding: 0% 40px;
+          background-color: var(--white);
+          opacity: 1;
+          width: 0vw;
+          height: 0vh;
+          transition: opacity 0.5s, padding 0.5s;
+        }
+
+        .links a:hover {
+          text-decoration: none;
+          opacity: 0.7;
+          border: 0px;
+          /* padding: 0% 48px; */
+          padding: 0% 34.9px;
+        }
+
+        .links svg {
+          /* width: 3vw;
+          height: 6vh; */
+          /* margin: 0% 50px; */
+          /* width: 9vw;
+          height: 15vh; */
+          margin-top: 11px;
+          width: 50px;
+          height: 50px;
+          fill:var(--black);
+          /* border: solid 1px var(--black); */
+          background-color: var(--white);
+          transition: fill 0.5s, width 0.5s, height 0.5s, margin-top 0.5s;
+          /* transition: background-color 0.5s; */
+        }
+
+        .links svg:hover {
+          margin-top: 1px;
+          /* width: 55px;
+          height: 55px; */
+          width: 60px;
+          height: 60px;
+          fill: var(--color-2-light);
+          /* background-color: var(--bx-shadow-clear); */
+          stroke: var(--color-2);
+          stroke-width: 0.5;
+          cursor: pointer;
         }
         
-
-        .media-links svg, .media-links image {
-          width: 4vw;
-          height: 4vh;
-          background: var(--white);
-          /* filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5); */
-          border-radius: 10px;
-          border: solid 2px var(--black);
+        .forms {
+          background-color: var(--color-2-light);
+          width: 70%;
+          padding: 1%;
+        }
+        
+        .forms form {
+          display: flex;
+          flex-direction: column;
         }
 
-        .media-links a {
-          background-color: var(--white);
-          font-size: 80%;
-          /* padding-top: 10%;
-          padding: 1% 0.5%; */
-          padding: 10%;
+        .forms form > * {
+          margin: 1%;
+          width: 40%;
+          height: 30px;
+          border: 1px solid var(--bg-clear);
+          border-radius: 4px;
+          /* padding: 12px 20px; */
+          box-sizing: border-box;
+        }
+
+        /* .sendmail_title { */
+        .forms form > p {
+          width: auto;
+          height: auto;
           border: 0px;
-          color: var(--black);
-          text-decoration: none;
-          border: solid 2px var(--black);
+          border-radius: 0px;
+          /* padding: 12px 20px; */
+          box-sizing: auto;
+          position: relative;
+          right: 40%;
         }
-      
-        .media-links a:hover {
-          /* text-decoration: underline; */
-          border: solid 1px var(--black);
+
+
+        .forms input {
+          padding: 10px 10px;
+          transition: 0.5s;
+        }
+
+        .forms button {
+          position: relative;
+          left: 58%;
+          background-color: var(--white);
+          color: var(--black);
+          cursor: pointer;
+          vertical-align: text-top;
+          /* padding-right: 50px; */
+          transition: background-color 0.7s, color 0.5s, content 1.3s, focus 0.5s;
+        }
+
+        button span::after {
+          font-size: 100%;
+          content: "\276F" "\276F" "\0020" "\0020" "\2709";
+          /* content: "\203A"; */
+          opacity: 0;
+          /* padding-right: 50px; */
+          /* vertical-align: super; */
+          /* vertical-align: baseline; */
+          transition: opacity 1s, padding-left 1.3s;
+        }
+        
+        button:hover span::after {
+          opacity: 1;
+          padding-left: 5px;
+          content: "\276F" "\276F" "\0020" "\0020" "\2709";
+          /* content: "\203A"; */
+          /* vertical-align: text-top; */
+          /* vertical-align: baseline; */
+        }
+
+        .forms button:hover {
+          background-color: var(--black);
+          color: var(--white);
+        }
+
+        .forms textarea {
+          width: 98%;
+          height: 150px;
+          padding: 10px 10px;
+          box-sizing: border-box;
+          background-color: var(--bg-clear);
+          resize: none;
+          transition: 0.5s;
+        }
+
+        input:focus, textarea:focus, button:focus {
+          border: 3px solid var(--bg-clear);
         }
 
         /*-----------------------------------*/
