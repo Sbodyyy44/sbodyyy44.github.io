@@ -702,11 +702,12 @@ body {
           display: flex;
           flex-direction: row;
           justify-content: space-around;
-          margin: 0% 35%;
+          width: 25vw;
+          margin: 0% 35.5%;
           margin-bottom: 2vh;
           border-radius: 5px;
-          padding: 0.7%;
-          font-size: 22px;
+          padding: 0.7% 0%;
+          font-size: 2.5vh;
         }
 
         .reals-h2-1 {
@@ -853,7 +854,7 @@ body {
             text-align: center;
             border: solid 0.5px var(--border-clear);
             border-radius: 5px 5px;
-            padding: 1vh;
+            padding: 1.5vh;
             box-shadow: 0%;
             /* box-shadow: 0px 5px 10px rgb(107, 107, 107); */
             width: 40vw;
@@ -1066,7 +1067,7 @@ body {
         /*--------- END FOOTER BLOC ---------*/
         /*-----------------------------------*/
 
-        
+
         /*------- RESPONSIVE STRUCTURE ------*/
         /*------------- SIDENAV -------------*/
         @media only screen and (max-width: 1370px) {
@@ -1260,6 +1261,7 @@ body {
             /* margin-left: 15px; */
             max-width: 70vw;
             word-wrap: break-word;
+            text-align: start;
           }
           
           .timeline-content img {
@@ -1346,6 +1348,7 @@ body {
             grid-template-columns: auto auto auto;
             justify-content: space-around;
             align-content: space-around;
+            background-color: red;
           }
 
           /* .grid-item-4-divied-2 {
@@ -1373,9 +1376,13 @@ body {
           }
 
           [class^="reals-h2-"] {
-            margin: 0% 17%;
+            margin: 0% 20%;
+            padding: 2% 0%;
+            flex-direction: row;
+            justify-content: center;
+            width: 60vw;
             margin-bottom: 1vh;
-            font-size: 16px;
+            font-size: 2.5vh;
           }
 
           [class^="title-experience"] {
