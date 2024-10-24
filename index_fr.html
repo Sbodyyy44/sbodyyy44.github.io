@@ -498,10 +498,8 @@
                     </div>
                     <!-- END MAIN REALISATION -->
                 </div>
-            </main>
-            <!-- END MAIN -->
 
-            <footer>
+                <!-- MAIN CONTACT -->
                 <div class="blocks" id="contact">
                     <div class="block-arrangement-about">
                         <h1>#CONTACT</h1>
@@ -552,12 +550,17 @@
                             </div>
                         </div>
                     </div>
+                    <!-- END CONTACT -->
                 </div>
+            </main>
+            <!-- END MAIN -->
+
+            <footer>
+                <p style="visibility: hidden;">Crédit pour l'image d'arrière-plan à @https://www.pexels.com/@codioful/</p>
+                <p>Crédit des icônes à @<a href="https://www.svgrepo.com/author/bypeople/">bypeople</a> from icons pack collection : <a href="https://www.svgrepo.com/collection/minimal-ui-icons/">minimal-ui-icons</a></p>
+                <p>Version du site en HTML/CSS pure. Version du site en ReactJS comming soon</p>
+                <p>&#169; Sylvain Bodivit - Dernière édition le : <span id="frdate"></span>.</p>
             </footer>
-            <p style="visibility: hidden;">Crédit pour l'image d'arrière-plan à @https://www.pexels.com/@codioful/</p>
-            <p>Crédit des icônes à @<a href="https://www.svgrepo.com/author/bypeople/">bypeople</a> from icons pack collection : <a href="https://www.svgrepo.com/collection/minimal-ui-icons/">minimal-ui-icons</a></p>
-            <p>Pure HTML/CSS website version. ReactJS website version comming soon</p>
-            <p>&#169; Sylvain Bodivit - Last edited : 20/10/2024</p>
         </div>
     </div>
 
@@ -608,6 +611,7 @@
 
     <!-- Script pour les menu déroulant (id=realisation)-->
     <script>
+        // Fiches dépliantes :
         var coll = document.getElementsByClassName("title-experience");
         var i;
         for (i = 0; i < coll.length; i++) {
@@ -625,6 +629,24 @@
                 }
             });
         }
+
+        // Date du dernier commit :
+        fetch('https://api.github.com/repos/Sbodyyy44/sbodyyy44.github.io/commits?per_page=1')
+        .then(res => res.json())
+        .then(res => {
+            // document.getElementById('date').innerHTML = res[0].commit.author.date;
+            lastCommit = res[0].commit.author.date;
+            // console.log("Original Date : " + lastCommit);
+            // console.log("Original Date - toString : " + lastCommit.toString());
+            const currentDate = new Date(lastCommit);
+            const frDate = currentDate.toLocaleDateString();
+            // console.log("Français : " + currentDate.toLocaleDateString());
+            const formatter = new Intl.DateTimeFormat('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+            const formattedDate = formatter.format(currentDate);
+            // console.log("Americain : " + formattedDate);
+            document.getElementById('frdate').innerHTML = frDate;
+            // document.getElementById('endate').innerHTML = formattedDate;
+        })
     </script>
 </body>
 </html>

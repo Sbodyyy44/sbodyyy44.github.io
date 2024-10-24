@@ -1348,7 +1348,6 @@ body {
             grid-template-columns: auto auto auto;
             justify-content: space-around;
             align-content: space-around;
-            background-color: red;
           }
 
           /* .grid-item-4-divied-2 {
@@ -1382,11 +1381,12 @@ body {
             justify-content: center;
             width: 60vw;
             margin-bottom: 1vh;
-            font-size: 2.5vh;
+            font-size: 2.5vw;
           }
 
           [class^="title-experience"] {
             width: 90vw;
+            font-size: 2vw;
           }
 
           [class^="title-experience"]:hover {
